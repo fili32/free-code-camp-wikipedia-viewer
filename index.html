@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>free code  Camp: Wikipedia Viewer</title>
+  
+  
+  <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+   	<div class="container">
+<ul class="clearfix toolbar">    
+       <li>
+         <div class="tooltip">
+           
+  <span class="tooltiptext">Random Wiki</span>
+                  <a class="fa fa-3x fa-random" href="https://en.wikipedia.org/wiki/Special:Random" target="_blank"></a>
+</div>
+
+        </li>
+      
+        <li>
+<div class="search-wrapper">
+    <div class="input-holder">
+        <input type="text" class="search-input" placeholder="Type to search Wikipedia" spellcheck="false" />
+        <div class="tooltipSearch">
+        <span class="tooltipSearchtext">Wiki</span>
+        <div class="search-icon" onclick="searchToggle(this, event);"> <a class="fa fa-3x fa-search"></a></div>
+    </div>
+  </div>
+      
+    <span class="close" onclick="searchToggle(this, event);"></span>
+</div>
+        </li>   
+      </ul>
+</div>
+
+<div class="container-fluid displayResults searchContainer"></div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>

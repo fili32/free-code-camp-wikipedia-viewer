@@ -1,0 +1,258 @@
+
+body {
+	background: #233f4c;	
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+    //border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+  //background-color:black;
+      background: rgba(0, 0, 0, 0.5);
+   // background: transparent;
+  opacity: 1;
+  filter: alpha(opacity=60); /* For IE8 and earlier */
+    color: #757575;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    right: 50%;
+    margin-right: 33px;
+    top: 107%;  
+   /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltipSearch {
+    position: relative;
+    display: inline-block;
+    //border-bottom: 1px dotted black;
+}
+
+.tooltipSearch .tooltipSearchtext {
+    visibility: hidden;
+    width: 120px;
+    background: transparent;
+  opacity: 0.6;
+  filter: alpha(opacity=60); /* For IE8 and earlier */
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    //margin-left: 60px;
+    margin: -32px 1px -95px 34px;   
+    /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.tooltipSearch:hover .tooltipSearchtext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltip a {
+    border: none;
+    text-decoration: none;
+    border-radius:  0.2em 0 0 0.2em ;
+    background: #FFF;
+    outline: none;
+    position: relative;
+    z-index: 2;  
+    cursor: pointer;
+    padding: 10px 11px 11px 15px;
+    transition: all 0.3s ease-in-out;
+}
+.fa-random {
+  color:#7E9B4B;
+}
+ul {
+	list-style: none;
+	margin: 0;
+  padding: 11px;
+}
+.clearfix { *zoom: 1; }
+.clearfix:before, .clearfix:after {
+	content: "";
+	display: table;	
+}
+.clearfix:after { clear: both; }
+.container {
+	left: 50%;
+	margin: -17px 0 0 -67px;
+	position: absolute;
+	top: 50%;
+	width: 242px;
+}
+.toolbar{
+  color: #fff;
+}
+.toolbar li {
+	float: left;
+}
+
+.search-wrapper {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top:50%;
+    left:50%;
+}
+.search-wrapper{}
+.search-wrapper .input-holder {    
+    height: 70px;
+    width:70px;
+    overflow: hidden;
+    background: rgba(255,255,255,0);
+    //border-radius:6px;
+  border-radius: 0 .5em .5em 0 !important;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+.search-wrapper.active .input-holder {
+    width:450px;
+    //border-radius: 50px;
+    border-radius: 0 .5em .5em 0 !important;
+    background: rgba(0,0,0,0.5);
+    transition: all .5s cubic-bezier(0.000, 0.105, 0.035, 1.570);
+}
+.search-wrapper .input-holder .search-input {
+    width:100%;
+    height: 50px;
+    padding:0px 70px 0 20px;
+    opacity: 0;
+    position: absolute;
+    top:0px;
+    left:0px;
+    background: transparent;
+    box-sizing: border-box;
+    border:none;
+    outline:none;
+    font-family:"Open Sans", Arial, Verdana;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 20px;
+    color:#FFF;
+    transform: translate(0, 60px);
+    transition: all .3s cubic-bezier(0.000, 0.105, 0.035, 1.570);
+    transition-delay: 0.3s;
+}
+.search-wrapper.active .input-holder .search-input {
+    opacity: 1;
+    transform: translate(0px, 10px);
+}
+.tooltipSearch .search-icon {
+    border: none;
+    text-decoration: none;
+    border-radius: 0 0.2em  0.2em 0;
+    background: #FFF;
+    outline: none;
+    position: relative;
+    z-index: 2;  
+    cursor: pointer;
+    padding: 10px 11px 11px 15px;
+   transition: all 0.3s ease-in-out;
+}
+.tooltipSearch .search-icon .fa-search {
+    color:#7E9B4B;
+    display: inline-block;
+    vertical-align: middle;
+    position:relative;
+    transform: rotate(85deg);
+  transition: all .4s cubic-bezier(0.650, -0.600, 0.240, 1.650);
+}
+.search-wrapper.active .input-holder .tooltipSearch .search-icon .fa-search{
+    left: -4px;
+    top: 0px;
+    border-radius: 30px;
+    color: #7E9B4B;
+    transform: rotate(-4deg); 
+    font-size: 33px;
+}
+.search-wrapper.active .input-holder .tooltipSearch .search-icon {
+     width: 25px;
+    height: 30px;
+    left: 390px;
+    top: 11px;
+    border-radius: 57px;
+}
+
+.search-wrapper .close {
+    position: absolute;
+    z-index: 1;
+    top:24px;
+    right:20px;
+    width:25px;
+    height:25px;
+    cursor: pointer;
+    transform: rotate(-180deg);
+    transition: all .3s cubic-bezier(0.285, -0.450, 0.935, 0.110);
+    transition-delay: 0.2s;
+}
+.search-wrapper.active .close {
+    right:-50px;
+    transform: rotate(45deg);
+    transition: all .6s cubic-bezier(0.000, 0.105, 0.035, 1.570);
+    transition-delay: 0.5s;
+}
+.search-wrapper .close::before, .search-wrapper .close::after {
+    position:absolute;
+    content:'';
+    background: #7E9B4B;
+    border-radius: 2px;
+}
+.search-wrapper .close::before {
+    width: 8px;
+    height: 28px;
+    left: 10px;
+    top: 0px;
+}
+.search-wrapper .close::after {
+    width: 28px;
+    height: 8px;
+    left: 0px;
+    top: 10px;
+}
+
+.searchContainer {
+  //margin-top: 54px;
+  display: block;
+  margin: 180px auto;
+  width: 60%;
+}
+.searchResultsContainer {
+  width: 100%;
+  padding: 15px;
+  background: rgb(250, 250, 250);
+  border-left: 5px solid transparent;
+  border-radius: 5px;
+  box-shadow: 10px 10px 10px 2px rgba(0, 0, 0, 0.5);
+}
+
+.searchResultsContainer:hover {
+  border-left: 5px solid #CF9840;
+}
+
+a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(0, 0, 0);
+}
